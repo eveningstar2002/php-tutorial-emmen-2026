@@ -79,14 +79,16 @@ footer {
         height: auto;
         width: auto;
 
-        .content {
-            height: auto;
-            width: auto;
-            overflow: initial;
-            border:none;
-            box-shadow: initial;
-            border-radius: initial;
-        }
+
+    }
+
+    .content {
+        height: auto;
+        width: auto;
+        overflow: initial;
+        border:none;
+        box-shadow: initial;
+        border-radius: initial;
     }
 
 }

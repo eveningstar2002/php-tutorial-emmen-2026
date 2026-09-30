@@ -5,7 +5,10 @@ var_dump($_FILES);
 
 if (array_key_exists("myfile", $_FILES) &&  $_FILES["myfile"]["error"] === 0) {
     $filename = $_FILES["myfile"]["name"];
-    move_uploaded_file($_FILES["myfile"]["tmp_name"], __DIR__ . "/uploads/" . $filename);
+    $destinationFolder = __DIR__ . "/uploads/";
+    var_dump($destinationFolder);
+    @mkdir($destinationFolder);
+    move_uploaded_file($_FILES["myfile"]["tmp_name"], $destinationFolder . $filename);
     $uploadedFilename = "/examples/week05/03/uploads/" . $filename;
 }
 else {
